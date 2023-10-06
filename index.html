@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./main.css" />
+		<title>Afrizal Yogi Pratama | JS 1</title>
+	</head>
+	<body>
+		<section id="if-else">
+			<h1>If Else</h1>
+			<h4>Code:</h4>
+			<p>
+				let output = document.getElementById("output-if-else") <br />
+				let input = parseInt(document.getElementById("input-if-else").value)
+				<br /><br />
+				if (input >= 80) {
+				<br />
+				&nbsp;&nbsp;output.innerHTML = "" <br />
+				&nbsp;&nbsp;output.innerHTML += `Nilai Anda ${input}, Nilai Mutu A`<br />
+				}
+				<br />
+				else if (input >= 70) {
+				<br />
+				&nbsp;&nbsp;output.innerHTML = "" <br />
+				&nbsp;&nbsp;output.innerHTML += `Nilai Anda ${input}, Nilai Mutu B`<br />
+				}
+				<br />
+				else if (input >= 0) {
+				<br />
+				&nbsp;&nbsp;output.innerHTML = "" <br />
+				&nbsp;&nbsp;output.innerHTML += `Nilai Anda ${input}, Nilai Mutu C`<br />
+				}
+				<br />
+				else {
+				<br />
+				&nbsp;&nbsp; output.innerHTML = "" <br />
+				&nbsp;&nbsp;output.innerHTML += `Mohon masukan nilai terlebih dahulu`<br />
+				&nbsp;&nbsp;if (input < 0) {
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;output.innerHTML += `Pastikan nilai lebih dari
+				0`<br />
+				&nbsp;&nbsp;}
+				<br />
+				}
+			</p>
+			<h4>Input:</h4>
+			<input
+				type="number"
+				id="input-if-else"
+				placeholder="Masukan nilai mata kuliah Anda"
+				required />
+			<button onclick="ifElse()">Jalankan</button>
+			<h4>Output:</h4>
+			<div id="output-if-else"></div>
+		</section>
+		<section id="switch">
+			<h1>Switch Case</h1>
+			<h4>Code:</h4>
+			<p>
+				let output = document.getElementById("output-switch") <br />
+				let input = document.getElementById("input-switch").value.toLowerCase()
+				<br /><br />
+				switch (input) {<br />
+				&nbsp;&nbsp;case "senin": <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;output.innerHTML = "" <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;output.innerHTML += "Selamat! Senin merupakan
+				nama hari" <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;break <br />
+				&nbsp;&nbsp;case "selasa": <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;output.innerHTML = "" <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;output.innerHTML += "Selamat! Selasa merupakan
+				nama hari" <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;break <br />
+				&nbsp;&nbsp;... <br />
+				&nbsp;&nbsp;default: <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;output.innerHTML = "" <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;output.innerHTML += `Mohon maaf! ${input} bukan
+				merupakan nama hari` <br />
+				}
+			</p>
+			<h4>Input:</h4>
+			<input
+				type="text"
+				id="input-switch"
+				placeholder="Masukan nama hari"
+				required />
+			<button onclick="switchCase()">Jalankan</button>
+			<h4>Output:</h4>
+			<div id="output-switch"></div>
+		</section>
+		<section id="for">
+			<h1>For Loop</h1>
+			<h4>Code:</h4>
+			<p>
+				let output = document.getElementById("output-for") <br />
+				let input = document.getElementById("input-for").value <br />
+				let iteration =
+				parseInt(document.getElementById("input-for-iteration").value)
+				<br /><br />
+				output.innerHTML = ""
+				<br /><br />
+				for (i = 0; i < iteration; i++) { <br />
+				&nbsp;&nbsp;output.innerHTML += `${input}` <br />
+				}
+			</p>
+			<h4>Input:</h4>
+			<input type="text" id="input-for" placeholder="Masukan text" required />
+			<input
+				type="number"
+				id="input-for-iteration"
+				placeholder="Jumlah perulangan"
+				required />
+			<button onclick="forLoop()">Jalankan</button>
+			<h4>Output:</h4>
+			<div id="output-for"></div>
+		</section>
+		<section id="while">
+			<h1>While Loop</h1>
+			<h4>Code:</h4>
+			<p>
+				let output = document.getElementById("output-while") <br />
+				let input = document.getElementById("input-while").value <br />
+				let iteration =
+				parseInt(document.getElementById("input-while-iteration").value) <br />
+				let count = 0
+				<br /><br />
+				output.innerHTML = ""
+				<br /><br />
+				while (count < iteration) { <br />
+				&nbsp;&nbsp;output.innerHTML += `${input}` <br />
+				&nbsp;&nbsp;count++ <br />
+				}
+			</p>
+			<h4>Input:</h4>
+			<input type="text" id="input-while" placeholder="Masukan text" required />
+			<input
+				type="number"
+				id="input-while-iteration"
+				placeholder="Jumlah perulangan"
+				required />
+			<button onclick="whileLoop()">Jalankan</button>
+			<h4>Output:</h4>
+			<div id="output-while"></div>
+		</section>
+		<section id="do-while">
+			<h1>Do While Loop</h1>
+			<h4>Code:</h4>
+			<p>
+				let output = document.getElementById("output-do-while") <br />
+				let iteration =
+				parseInt(document.getElementById("input-do-while").value) <br />
+				let count = 1
+				<br /><br />
+				output.innerHTML = ""
+				<br /><br />
+				do { <br />
+				&nbsp;&nbsp;output.innerHTML += `${count}` <br />
+				&nbsp;&nbsp;count++ <br />
+				} while (count <= iteration)
+				<br /><br />
+				if (isNaN(iteration)) { <br />
+				&nbsp;&nbsp;output.innerHTML += "Anda tidak memasukan input angka > 0"
+				<br />
+				}
+			</p>
+			<h4>Input:</h4>
+			<input
+				type="text"
+				id="input-do-while"
+				placeholder="Input angka atau gagal loop"
+				required />
+			<button onclick="doWhileLoop()">Jalankan</button>
+			<h4>Output:</h4>
+			<p>Iterasi</p>
+			<div id="output-do-while"></div>
+		</section>
+		<script src="./main.js"></script>
+	</body>
+</html>
